@@ -1,0 +1,26 @@
+/*隐藏所有图片*/
+img {
+    display: none;
+}
+.start a,.start a:hover{
+    display: block;
+    height: 32px;
+    width: 80px;
+    line-height: 32px;
+    text-align: center;
+    color: white;
+    font-family: "SimSun", "宋体", "Arial Narrow";
+    font-weight: bold;
+    border: 1px solid red;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #ff3030;
+    margin-left: 330px;
+}
+.prompt{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #ff0000;
+    font-family: "SimSun", "宋体", "Arial Narrow";
+}

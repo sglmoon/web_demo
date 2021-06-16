@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞翔的小鸟</title>
+    <link rel="stylesheet" href="./css/fly_bird.css">
+    <script src="./js/util.js"></script>
+    <script src="./js/sky.js"></script>
+    <script src="./js/pipe.js"></script>
+    <script src="./js/land.js"></script>
+    <script src="./js/bird.js"></script>
+    <script src="./js/gameScene.js"></script>
+    <script src="./js/overScene.js"></script>
+</head>
+<body>
+<canvas id="cvs" width="500" height="500"></canvas>
+<div class="start" ><a id="start" href="javascript:;">开始游戏</a></div>
+<div class="prompt" id="prompt">[space]空格键控制飞翔</div>
+<!--开始游戏，加载资源，绘制游戏场景-->
+<script>
+    //获取绘图上下文对象
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+    //游戏结束标识
+    var isRun = true;
+    //游戏场景
+    var gameScene = null;
+
+    //加载资源绘制场景
+    util.loadImage({
+        bird: './img/bird.png',
+        land: './img/land.png',
+        pipeDown: './img/pipeDown.png',
+        pipeUp: './img/pipeUp.png',
+        sky: './img/sky.png'
+    }, function (imgObj) {
+        //根据背景大小设置画布大小
+        cvs.width = imgObj.sky.width;
+        cvs.height = imgObj.sky.height;
+
+        //创建游戏场景
+        gameScene = getGameScene(ctx, imgObj, 1.5);
+        //创建游戏结束场景
+        var overScene = getOverScene(ctx);
+
+        //添加游戏结束监听的听众
+        gameScene.addListener(function(){
+            isRun = false;
+            overScene.draw();
+        });
+        //绘制场景
+        gameScene.draw();
+    });
+    var start = document.getElementById('start');
+    start.onclick = function(){
+        start.style.display = 'none';
+        document.getElementById('prompt').style.display = 'none';
+        //开始游戏，绘制场景,使用requestAnimationFrame替代SetInterval
+        (function run() {
+            gameScene.draw();
+            if(isRun){
+                requestAnimationFrame( run );
+            }
+        }());
+    }
+</script>
+</body>
+</html>

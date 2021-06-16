@@ -1,0 +1,150 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+
+.logo {
+    padding-top: 18px;
+}
+
+.registerarea {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 10px;
+    background-color: #ececec;
+    border-bottom: 1px solid #ccc;
+}
+
+.login {
+    float: right;
+    font-size: 14px;
+}
+
+.login a {
+    color: #c81523;
+}
+
+.reg_form {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.reg_form ul li label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+.reg_form ul li .inp {
+    width: 242px;
+    height: 38px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: #de1111;
+}
+
+.success {
+    color: #40b83f;
+}
+
+.success_icon,
+.error_icon {
+    display: inline-block;
+    margin-top: -2px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(../images/error.png) no-repeat;
+}
+
+.success_icon {
+    background: url(../images/success.png) no-repeat;
+}
+
+.safe {
+    padding-left: 165px;
+}
+
+.safe em {
+    margin-left: 2px;
+    padding: 0 12px;
+    color: #fff;
+}
+
+.ruo {
+    background-color: #de1111;
+}
+
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+
+.agree {
+    margin-left: 90px;
+}
+
+.agree input {
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #1ba1e6;
+}
+
+.agree a:hover {
+    color: #c81623;
+}
+
+.submit {
+    margin: 40px 0 0 120px;
+}
+
+.btn {
+    width: 200px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #c81623;
+    text-align: center;
+}
+
+.footer .mod_copyright {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer .mod_copyright .links {
+    margin-bottom: 15px;
+}
+
+.footer .mod_copyright .links a {
+    margin: 0 3px;
+}
+
+.footer .mod_copyright .copyright {
+    line-height: 20px;
+}

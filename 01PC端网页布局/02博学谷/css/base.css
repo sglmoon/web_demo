@@ -1,0 +1,101 @@
+/* 清除内外边距 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 清除i，em字体倾斜 */
+
+i,
+em {
+    font-style: normal;
+}
+
+
+/* 清除li的默认样式 */
+
+li {
+    list-style: none;
+}
+
+
+/* 统一设置a标签默认颜色，去下划线 */
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c81623
+}
+
+
+/* 处理图片底部空隙 */
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+
+/* 去除input，button的内外边框 */
+
+button,
+input {
+    border: 0;
+    outline: none;
+}
+
+
+/* 同一设置body的字体相关样式 */
+
+
+/* 通用样式，隐藏、左浮动、有浮动、清除浮动、固定字体、固定宽度等 */
+
+.hide,
+.none {
+    display: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 清除浮动单伪元素 */
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* 清除浮动双伪元素 */
+
+
+/* .clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+} */
+
+
+/* 兼容IE低版本 */
+
+.clearfix {
+    *zoom: 1;
+}

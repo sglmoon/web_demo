@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片加载</title>
+</head>
+<body>
+<script src="loadImages.js"></script>
+<script>
+    loadImage({
+            bird: '../img/bird.png',
+            sky:  '../img/sky.png'
+        },
+        function(imgObj){
+            console.log(imgObj);
+            console.log(imgObj.bird.width);
+        }
+    )
+</script>
+</body>
+</html>
